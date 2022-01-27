@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>login</title>
+</head>
+<body>
+    <h1 class="animate__animated animate__pulse">LOGIN</h1> <br><br>
+    <div class="main">
+        <section>
+        <input type="email" placeholder="email address" id="email" size="50px">
+        <br><br>
+        <input type="password" placeholder="password" id="password" size="50px">
+        <br><br>
+        <button type="button" onclick="login()">LOGIN</button>
+       
+        </section>
+       
+    </div>
+     
+
+
+   <script>
+       function login(){
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value;
+
+         const email1=localStorage.getItem("email1");
+        const password1=localStorage.getItem("password1");
+
+        if(email==email1 && password==password1){
+            localStorage.setItem("code","secret");
+            window.location.href="home.html";
+        }else{
+            alert("email and pass incorrect")
+        }
+
+
+
+       }
+
+   </script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>signup</title>
+</head>
+<body>
+    <h1 class=" animate__animated animate__pulse">SIGN UP</h1> <br><br><div class="main">
+        <section>
+            <input type="text" id="username" placeholder="enter your name" size="50px">
+            <br><br>
+            <input type="age" id="age" placeholder="enter your age" size="50px">
+            <br><br>
+            <input type="email" id="email" placeholder="enter your email" size="50px">
+            <br><br>
+            <input type="password" id="password" placeholder="enter your password" size="50px">
+            <br><br>
+            <input type="address" id="address" placeholder="enter your address" size="50px">
+            <br><br>
+            <button onclick="signup()">SIGNUP</button>
+    
+    
+    
+    
+        </section></div>
+    
+        
+  <script>
+      function signup (){
+const username = document.getElementById("username").value;
+const age = document.getElementById("age").value;
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+const address = document.getElementById("address").value;
+
+
+localStorage.setItem("username1", username)
+localStorage.setItem("age1", age)
+localStorage.setItem("email1", email)
+localStorage.setItem("password1", password)
+localStorage.setItem("address1", address)
+
+document.getElementById("username").value="";
+document.getElementById("age").value="";
+document.getElementById("email").value="";
+document.getElementById("password").value="";
+document.getElementById("address").value="";
+alert("user registerd successfully......!!")
+window.location.assign("./login.html")
+
+}
+
+  </script>
+    
+</body>
+</html>
